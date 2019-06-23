@@ -1,0 +1,93 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+
+body {
+    padding: 0px;
+}
+
+.fwindow {
+    position: absolute;
+    overflow: hidden;
+    background: white;
+    border-style: solid;
+    border-width: 1px;
+    border-size: 1px;
+    border-color: gainsboro;
+    width: 200px;
+    height: 100px;
+}
+
+.fheader {
+    position: relative;
+    background: dimGray;
+    top: 0;
+    left: 0;
+    right: 0;
+    cursor: move;
+    width: 100%;
+    height: 20px;
+}
+
+.fresizer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    cursor: se-resize;
+    border-bottom: solid 5px dimGray;
+    border-right: solid 5px gray;
+    border-left: solid 5px white;
+    border-top: solid 5px white;
+}
+
+.fcontainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0px;
+    background-color: gainsboro;
+}
+
+.fmenu {
+    position: relative;
+    width: 60px;
+    height: 100%;
+    background-color: #757575;
+    float: right;
+}
+
+.fmenubutton {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    opacity: 0.3;
+}
+
+.fmenubutton:hover {
+    opacity: 1;
+    background-color: gray;
+}
+
+.fmenubuttonsvg {
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.fredbackground:hover {
+    opacity: 1;
+    background-color: red;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Macrohard Doors</title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="Description" content="Windows but it doesn't suck">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="v.css">
+    <script src="v.js"></script>
+	<script src="fs.js"></script>
+    <style>
+        body {
+            background-color: lightGray;
+        }
+    </style>
+    <script type="text/javascript">
+        function setTitle(e) {
+            e.target.closest('.fwindow').title = e.target.value;
+        }
+        
+        function wndCreate(e) {
+            createWindowFromHTML(document.getElementById('5dc776a3-adf4-41ba-9861-be2e7a756f79').value, e.target.parentElement.parentElement);
+        }
+        
+        function start() {
+        
+        }
+    </script>
+</head>
+<body onload="start()">
+    <div class="fcontainer">
+        <div class="fwindow" maxsize="500;500" minsize="100;100" title="SetTitle">
+            <input value="SetTitle" onchange="setTitle(event)" />
+        </div>
+        <div class="fwindow" maxsize="1000;500" minsize="200;100" title="DuoDevelop">
+            <button type="button" onclick="wndCreate(event)" style="height: 20px">Test</button>
+            <textarea id="5dc776a3-adf4-41ba-9861-be2e7a756f79" style="bottom: 0; left: 0; right: 0; position: absolute; margin: auto; height: calc(100% - 40px); width: 100%;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title>foo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    foo
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+        </div>
+    </div>
+</body>
+</html>
