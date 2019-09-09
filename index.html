@@ -75,9 +75,13 @@
                 transform: rotate(360deg);
             }
         }
+        
+        h1, p, span {
+            color:green;
+        }
     </style>
     <script type='text/javascript'>
-            var spapages = ["empty", "jswarning", "cos", "csearch", "dcup", "reminf", "toolbox", "xps", "privacywnd", "quaere"];
+            var spapages = ["empty", "jswarning", "cos", "csearch", "dcup", "uptool", "xps", "privacywnd", "quaere"];
             function Enable(s) {
                 try{document.getElementById(s).style.display = "block";}catch{console.log(s);}
             }
@@ -136,10 +140,10 @@
                 <input type="button" class="button" value="BDCraft↗" onclick="GoToLink('http://bdcraft.net/community/member/CreepyCrafter24/')" />
                 <input type="button" class="button" value="Github↗" onclick="GoToLink('https://github.com/creepycrafter24/repositories')" />
                 <input type="button" class="button" value="Update-Server" onclick="SetH('dcup')" />
-                <input type="button" class="button" value="Remote Information" onclick="SetH('reminf')" />
+                <input type="button" class="button" value="Remote Information" onclick="GoToLink('https://github.com/CreepyCrafter24/UpTool2/releases/download/Repo/Repo.xml')" />
                 <!--<input type="button" class="button" value="Farming Simulator 1870↗" onclick="GoToLink('http://orteil.dashnet.org/igm/?g=Sgd1unw8')" />-->
                 <input type="button" class="button" value="Creepers Unity Extensions⭳" onclick="GoToLink('https://github.com/CreepyCrafter24/CreepyCrafter24.github.io/releases/download/1.0.0/Editor-Extensions.unitypackage')" />
-                <input type="button" class="button" value="CC-Toolbox" onclick="SetH('toolbox')" />
+                <input type="button" class="button" value="UpTool 2" onclick="SetH('uptool')" />
                 <input type="button" class="button" value="Experiments" onclick="SetH('xps')" />
                 <input type="button" class="button" value="C-OS" onclick="SetH('cos')" />
                 <input type="button" class="button" value="CSearch" onclick="SetH('csearch')" />
@@ -188,18 +192,13 @@
             </div>
             <hr width=50% style="color:green;">
         </div>
-        <div id="reminf" style="display: none;">
-            <iframe class="iiframe" src="/reminf"></iframe>
-        </div>
-        <div id="toolbox" style="display: none;">
-            <h1 style="text-align:center;color:green;">CC-Toolbox</h1>
+        <div id="uptool" style="display: none;">
+            <h1 style="text-align:center;color:green;">UpTool 2</h1>
             <br><br>
             <hr width=50% style="color:green;">
-            <p>CC-Toolbox is an application by me to download other applications by me. Makes sense, right?</p>
-            <p>Warning: CC-Toolbox and some of its applications might depend on one of the following packages:</p>
-            <p><a href="http://support.microsoft.com/kb/2019667">Visual C++ Redistributable for Visual Studio 2017</a></p>
+            <p>UpTool 2 is an application by me to download other applications by me. Makes sense, right?</p>
             <div style="text-align:center">
-                <p><a href="https://github.com/CreepyCrafter24/CC-Toolbox/releases/download/0.0.1/CC-Toolbox.Setup.exe" class="greenbutton">Download⭳</a></p>
+                <input type="button" class="button" value="Download⭳" onclick="GoToLink('https://github.com/CreepyCrafter24/UpTool2/releases/download/v1.0/UpTool2.exe')" />
             </div>
             <hr width=50% style="color:green;">
         </div>
@@ -210,7 +209,7 @@
                 <input type="button" class="button" value="V" onclick="GoToLink('http://creepycrafter24.github.io/V/')" />
                 <input type="button" class="button" value="HackerTyper" onclick="GoToLink('http://creepycrafter24.github.io/HT_HTML5')" />
                 <input type="button" class="button" value="QuAERE" onclick="SetH('quaere')" />
-                <p style="color:green;">Note: some parts of this site are hidden. Have fun finding them. :)</p>
+                <p>Note: some parts of this site are hidden. Have fun finding them. :)</p>
             </center>
         </div>
         <div id="privacywnd" style="display: none;">
