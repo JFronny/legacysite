@@ -11,26 +11,6 @@
             padding: 5px;
         }
 
-        .greenbutton {
-            background-image: linear-gradient(#44dd88, #2eb489);
-            background-color: #44dd88;
-            -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;
-            border-radius: 4px;
-            cursor: pointer;
-            color: white;
-            font-family: "Helvetica";
-            font-weight: 100;
-            font-size: 10pt;
-            padding: 10px;
-            text-decoration: none;
-        }
-
-            .greenbutton:hover {
-                background-image: linear-gradient(#61eb9f, #44dd88);
-                background-color: #61eb9f;
-            }
-
         .button {
             background-color: #555555;
             border: none;
@@ -127,6 +107,36 @@
                 SetH("empty");
                 Enable("Navigation");
                 Enable("NavB");
+                const request = new Request('https://api.github.com/repos/CreepyCrafter24/UpTool2/contents/Meta.xml', {method: 'GET'});
+                const URL = request.url;
+                const method = request.method;
+                const credentials = request.credentials;
+                const bodyUsed = request.bodyUsed;
+                fetch(request)
+                    .then(response => {
+                        if (response.status === 200) {
+                            return response.json();
+                        } else {
+                            throw new Error('Something went wrong on api server!');
+                        }
+                    })
+                    .then(response => {
+                        txt = atob(response.content);
+                        if (window.DOMParser)
+                        {
+                            parser = new DOMParser();
+                            xmlDoc = parser.parseFromString(txt, "text/xml");
+                        }
+                        else // Internet Explorer
+                        {
+                            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                            xmlDoc.async = false;
+                            xmlDoc.loadXML(txt);
+                        }
+						document.getElementById("uptooldl").innerHTML = "<a class=\"button\" href=\"" + xmlDoc.getElementsByTagName("File")[0].innerHTML + "\"  style=\"height:20px;\" >Download⭳</a>"
+                    }).catch(error => {
+                        console.error(error);
+                    });
             }
     </script>
 </head>
@@ -136,15 +146,15 @@
         <div id="Navigation" style="display: none;">
             <hr width=50% style="color:white;">
             <p> <div style="width:50%;">
-                <a class="button" href="https://www.curseforge.com/members/creepycrafter24/projects" style="height:20px;">CurseForge↗</a>
-                <a class="button" href="http://bdcraft.net/community/member/CreepyCrafter24/" style="height:20px;">BDCraft↗</a>
-                <a class="button" href="https://github.com/CreepyCrafter24?tab=repositories" style="height:20px;">Github↗</a>
-                <input type="button" class="button" value="Update-Server" onclick="SetH('dcup')" />
-                <a class="button" href="https://github.com/CreepyCrafter24/UpTool2/releases/download/Repo/Repo.xml" style="height:20px;">Remote Information⭳</a>
-                <input type="button" class="button" value="UpTool 2" onclick="SetH('uptool')" />
-                <input type="button" class="button" value="Experiments" onclick="SetH('xps')" />
-                <input type="button" class="button" value="C-OS" onclick="SetH('cos')" />
-                <input type="button" class="button" value="CSearch" onclick="SetH('csearch')" />
+                <a class="button" href="https://www.curseforge.com/members/creepycrafter24/projects" style="height:20px;">CurseForge</a>
+                <a class="button" href="http://bdcraft.net/community/member/CreepyCrafter24/" style="height:20px;">BDCraft</a>
+                <a class="button" href="https://github.com/CreepyCrafter24?tab=repositories" style="height:20px;">Github</a>
+                <a class="button" href="#" style="height:20px;" onclick="SetH('dcup')">Update-Server</a>
+                <a class="button" href="https://raw.githubusercontent.com/CreepyCrafter24/UpTool2/master/Repo.xml" style="height:20px;">Remote Information</a>
+                <a class="button" href="#" style="height:20px;" onclick="SetH('uptool')">UpTool 2</a>
+                <a class="button" href="#" style="height:20px;" onclick="SetH('xps')">Experiments</a>
+                <a class="button" href="#" style="height:20px;" onclick="SetH('cos')">C-OS</a>
+                <a class="button" href="#" style="height:20px;" onclick="SetH('csearch')">CSearch</a>
                 <a class="button" href="https://creepycrafter24.github.io/Custom Player" style="height:20px;">Spatial Music Player</a>
             </div> </p>
             <hr width=50% style="color:white;">
@@ -169,7 +179,7 @@
                 <p>sha256: 4B37C50747390105C763E3758FEE5C0BC0912A57E0C9BDFE82B4C1B3943D248F</p>
             </div>
             <p>Root & Account password: "P4ssw0rd!"</p>
-            <p><a href="https://drive.google.com/uc?id=1KZpm6UE-G4fjFsT79xzdGXy8_5AImR-0&export=download" class="greenbutton">Download Live-Disk-Image⭳</a></p>
+            <p><a href="https://drive.google.com/uc?id=1KZpm6UE-G4fjFsT79xzdGXy8_5AImR-0&export=download" class="button" style="height:20px;">Download Live-Disk-Image⭳</a></p>
             <hr width=50% style="color:green;">
         </div>
         <div id="csearch" style="display: none;">
@@ -195,18 +205,18 @@
             <br><br>
             <hr width=50% style="color:green;">
             <p>UpTool 2 is an application by me to download other applications by me. Makes sense, right?</p>
-            <div style="text-align:center">
-                <input type="button" class="button" value="Download⭳" onclick="GoToLink('https://github.com/CreepyCrafter24/UpTool2/releases/download/v1.6/UpTool2.exe')" />
+            <div style="text-align:center" id="uptooldl">
+                
             </div>
             <hr width=50% style="color:green;">
         </div>
         <div id="xps" style="display: none;">
             <center>
-                <input type="button" class="button" value="Roll A Ball⭳" onclick="GoToLink('http://creepycrafter24.github.io/RollABall.7z')" />
-                <input type="button" class="button" value="Toast-Edit" onclick="GoToLink('http://creepycrafter24.github.io/Toast')" />
-                <input type="button" class="button" value="V" onclick="GoToLink('http://creepycrafter24.github.io/V/')" />
-                <input type="button" class="button" value="HackerTyper" onclick="GoToLink('http://creepycrafter24.github.io/HT_HTML5')" />
-                <input type="button" class="button" value="QuAERE" onclick="SetH('quaere')" />
+                <a class="button" href="http://creepycrafter24.github.io/RollABall.7z" style="height:20px;">Roll A Ball</a>
+                <a class="button" href="http://creepycrafter24.github.io/Toast" style="height:20px;">Toast-Edit</a>
+                <a class="button" href="http://creepycrafter24.github.io/V/" style="height:20px;">V</a>
+                <a class="button" href="http://creepycrafter24.github.io/HT_HTML5" style="height:20px;">HackerTyper</a>
+                <a class="button" href="#" onclick="SetH('quaere')" style="height:20px;">QuAERE</a>
                 <p>Note: some parts of this site are hidden. Have fun finding them. :)</p>
             </center>
         </div>
