@@ -57,11 +57,10 @@
             var TWFlash = '<span class="TWFlash">|</span>';
             document.addEventListener("keydown", function (){
                 if (ENDED == 0) {
-                    AT();
-                    AT();
-                    AT();
-                    AT();
-                    AT();
+					var j = 0;
+                    for (j = 0; j < 5; j++) {
+                        AT();
+                    }
                 }
             });
             
