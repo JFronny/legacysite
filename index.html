@@ -107,7 +107,7 @@
                 SetH("empty");
                 Enable("Navigation");
                 Enable("NavB");
-                const request = new Request('https://api.github.com/repos/CreepyCrafter24/UpTool2/contents/Meta.xml', {method: 'GET'});
+                const request = new Request('https://api.github.com/repos/JFronny/UpTool2/contents/Meta.xml', {method: 'GET'});
                 const URL = request.url;
                 const method = request.method;
                 const credentials = request.credentials;
@@ -133,7 +133,7 @@
                             xmlDoc.async = false;
                             xmlDoc.loadXML(txt);
                         }
-						document.getElementById("uptooldl").innerHTML = "<a class=\"button\" href=\"" + xmlDoc.getElementsByTagName("File")[0].innerHTML + "\"  style=\"height:20px;\" >Download⭳</a>"
+                        document.getElementById("uptooldl").innerHTML = "<a class=\"button\" href=\"" + xmlDoc.getElementsByTagName("File")[0].innerHTML + "\"  style=\"height:20px;\" >Download⭳</a>"
                     }).catch(error => {
                         console.error(error);
                     });
@@ -147,10 +147,10 @@
             <hr width=50% style="color:white;">
             <p> <div style="width:50%;">
                 <a class="button" href="https://www.curseforge.com/members/creepycrafter24/projects" style="height:20px;">CurseForge</a>
-                <a class="button" href="http://bdcraft.net/community/member/CreepyCrafter24/" style="height:20px;">BDCraft</a>
-                <a class="button" href="https://github.com/CreepyCrafter24?tab=repositories" style="height:20px;">Github</a>
+                <a class="button" href="http://bdcraft.net/community/member/JFronny/" style="height:20px;">BDCraft</a>
+                <a class="button" href="https://github.com/JFronny?tab=repositories" style="height:20px;">Github</a>
                 <a class="button" href="#" style="height:20px;" onclick="SetH('dcup')">Update-Server</a>
-                <a class="button" href="https://raw.githubusercontent.com/CreepyCrafter24/UpTool2/master/Repo.xml" style="height:20px;">Remote Information</a>
+                <a class="button" href="https://raw.githubusercontent.com/JFronny/UpTool2/master/Repo.xml" style="height:20px;">Remote Information</a>
                 <a class="button" href="#" style="height:20px;" onclick="SetH('uptool')">UpTool 2</a>
                 <a class="button" href="#" style="height:20px;" onclick="SetH('xps')">Experiments</a>
                 <a class="button" href="#" style="height:20px;" onclick="SetH('cos')">C-OS</a>
@@ -158,7 +158,7 @@
                 <a class="button" href="https://creepycrafter24.github.io/Custom Player" style="height:20px;">Spatial Music Player</a>
             </div> </p>
             <hr width=50% style="color:white;">
-            <a href="#" onclick="GoToLink('https://github.com/CreepyCrafter24/CreepyCrafter24.github.io')" style="color: white">View Source</a>
+            <a href="#" onclick="GoToLink('https://github.com/JFronny/JFronny.github.io')" style="color: white">View Source</a>
             <a href="#" onclick="SetH('privacywnd')" style="color: white">Privacy</a>
             <br>
             <hr width=100% style="color: black;">
@@ -230,9 +230,9 @@
         </div>
         <div id="quaere" style="display: none;">
             <a class="button" href="https://drive.google.com/uc?id=1vk9VHbD8UKzQGD5_yYa_tqBsit-BFkZ0" style="height:20px;">Binaries</a>
-			<br>
+            <br>
             Hash (SHA256): <b>A9B12C17C36D5390AB51E106AFE992E6A36DA5C030787AF8C283908A108868E4</b>
-            <script src="https://gist.github.com/CreepyCrafter24/99bccd26087657c1ae8d1d2fcea6ed20.js"></script>
+            <script src="https://gist.github.com/JFronny/99bccd26087657c1ae8d1d2fcea6ed20.js"></script>
         </div>
     </center>
 </body>
