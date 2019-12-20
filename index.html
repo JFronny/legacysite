@@ -107,31 +107,26 @@
                 SetH("empty");
                 Enable("Navigation");
                 Enable("NavB");
-                const request = new Request('https://api.github.com/repos/JFronny/UpTool2/contents/Meta.xml', {method: 'GET'});
-                const URL = request.url;
-                const method = request.method;
-                const credentials = request.credentials;
-                const bodyUsed = request.bodyUsed;
+                const request = new Request('https://gist.githubusercontent.com/JFronny/f1ccbba3d8a2f5862592bb29fdb612c4/raw/Meta.xml', {method: 'GET'});
                 fetch(request)
                     .then(response => {
                         if (response.status === 200) {
-                            return response.json();
+                            return response.text();
                         } else {
                             throw new Error('Something went wrong on api server!');
                         }
                     })
                     .then(response => {
-                        txt = atob(response.content);
                         if (window.DOMParser)
                         {
                             parser = new DOMParser();
-                            xmlDoc = parser.parseFromString(txt, "text/xml");
+                            xmlDoc = parser.parseFromString(response, "text/xml");
                         }
                         else // Internet Explorer
                         {
                             xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
                             xmlDoc.async = false;
-                            xmlDoc.loadXML(txt);
+                            xmlDoc.loadXML(response);
                         }
                         document.getElementById("uptooldl").innerHTML = "<a class=\"button\" href=\"" + xmlDoc.getElementsByTagName("File")[0].innerHTML + "\"  style=\"height:20px;\" >Download⭳</a>"
                     }).catch(error => {
