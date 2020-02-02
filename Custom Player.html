@@ -168,11 +168,11 @@
         #audio_player, .info, .error, input {
             display: block;
             width: 427px;
-            margin: auto auto auto auto;
+            margin: auto;
         }
 
         .info {
-            background-color: aqua;         
+            background-color: aqua;
         }
 
         .error {
@@ -180,7 +180,7 @@
             color: white;
         }
 
-        body { 
+        body {
             font-family: Verdana, Geneva, sans-serif;
             background-color: #2b2b2b;
             margin-top: 30px;
@@ -191,13 +191,13 @@
             font-size: 0.9em;
         }
 
-        h1 { 
+        h1 {
             font-size:20px;
             color:#333;
         }
 
         #audio_player {
-            padding:2px 2px 1px 2px;
+           padding:2px 2px 1px;
             background-color:black;
             border:2px solid darkgreen;
             border-radius: 9px;
@@ -261,12 +261,11 @@
             border: none;
             border-radius: 9px;
             color:green;
-            background:#00c000; 
+            background:#00c000;
         }
 
         progress[value]::-webkit-progress-bar {
             border: none;
-            border-radius: 9px;
             background-color: #00c000;
             border-radius: 2px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
@@ -292,14 +291,14 @@
             width: 100%;
             height: 4.4px;
             cursor: pointer;
-            box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+            box-shadow: 1px 1px 2px #002200, 0px 0px 1px #003c00;
             background: #205928;
             border-radius: 1px;
             border: 1.1px solid #18d501;
         }
 
         input[type=range]::-webkit-slider-thumb {
-            box-shadow: 2.6px 2.6px 3.7px #00aa00, 0px 0px 2.6px #00c300;
+            box-shadow: 3px 3px 4px #00aa00, 0px 0px 3px #00c300;
             border: 2.5px solid #83e584;
             height: 18px;
             width: 9px;
@@ -318,14 +317,14 @@
             width: 100%;
             height: 4.4px;
             cursor: pointer;
-            box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+            box-shadow: 1px 1px 2px #002200, 0px 0px 1px #003c00;
             background: #205928;
             border-radius: 1px;
             border: 1.1px solid #18d501;
         }
 
         input[type=range]::-moz-range-thumb {
-            box-shadow: 2.6px 2.6px 3.7px #00aa00, 0px 0px 2.6px #00c300;
+            box-shadow: 3px 3px 4px #00aa00, 0px 0px 3px #00c300;
             border: 2.5px solid #83e584;
             height: 18px;
             width: 9px;
@@ -347,25 +346,24 @@
             background: #194620;
             border: 1.1px solid #18d501;
             border-radius: 2px;
-            box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+            box-shadow: 1px 1px 2px #002200, 0px 0px 1px #003c00;
         }
 
         input[type=range]::-ms-fill-upper {
             background: #205928;
             border: 1.1px solid #18d501;
             border-radius: 2px;
-            box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+            box-shadow: 1px 1px 2px #002200, 0px 0px 1px #003c00;
         }
 
         input[type=range]::-ms-thumb {
-            box-shadow: 2.6px 2.6px 3.7px #00aa00, 0px 0px 2.6px #00c300;
+            box-shadow: 3px 3px 4px #00aa00, 0px 0px 3px #00c300;
             border: 2.5px solid #83e584;
-            height: 18px;
             width: 9px;
+            height: 4.4px;
             border-radius: 3px;
             background: #439643;
             cursor: pointer;
-            height: 4.4px;
         }
 
         input[type=range]:focus::-ms-fill-lower {
